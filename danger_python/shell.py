@@ -14,6 +14,7 @@ def resolve_danger_path():
 
     if process.returncode == 0:
         path = process.stdout.decode("utf-8")
+        print("Danger path: " + path)
         return path.strip()
     else:
         raise SystemConfigurationException("danger-js not found in PATH")
@@ -26,6 +27,7 @@ def invoke_danger(parameters: List[str]) -> subprocess.CompletedProcess:
 
 def build_danger_command(parameters: List[str]) -> List[str]:
     command = [resolve_danger_path()]
+    command = ['danger']
     command.extend(parameters)
     command.extend(["--process", "danger-python", "-u"])
     return command
