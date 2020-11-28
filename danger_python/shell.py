@@ -30,7 +30,7 @@ def build_danger_command(parameters: List[str]) -> List[str]:
     command.extend(parameters)
     print("parameters:")
     print(parameters)
-    command.extend(["-v", "--process", "danger-python", "-u"])
+    command.extend(["--process", "danger-python", "-u"])
     print("command:")
     print(command)
     return command
