@@ -29,6 +29,8 @@ def build_danger_command(parameters: List[str]) -> List[str]:
     command = [resolve_danger_path()]
     command = ['danger']
     command.extend(parameters)
+    print("parameters:")
+    print(parameters)
     command.extend(["--process", "danger-python", "-u"])
     return command
 
