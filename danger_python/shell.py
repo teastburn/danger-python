@@ -32,6 +32,7 @@ def build_danger_command(parameters: List[str]) -> List[str]:
     print("parameters:")
     print(parameters)
     command.extend(["--process", "danger-python", "-u"])
+    print("command: " + command)
     return command
 
 
