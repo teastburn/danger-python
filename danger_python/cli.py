@@ -21,6 +21,7 @@ def run() -> None:
         try:
             execute_dangerfile(dangerfile.read())
         except DangerfileException as exc:
+            print(f"Caught exception running dangerfile: {exc}")
             click.echo(exc, err=True)
             sys.exit(-1)
 
