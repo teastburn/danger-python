@@ -41,7 +41,7 @@ def local(arguments: List[str]) -> None:
 @danger_command(cli, "ci")
 def ci(arguments: List[str]) -> None:
     """Runs Danger on CI"""
-    _execute_danger_js("ci", arguments)
+    _execute_danger_js("", arguments)
 
 
 def _execute_danger_js(command_name: str, arguments: List[str]) -> None:
