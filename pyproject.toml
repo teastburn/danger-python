@@ -16,6 +16,7 @@ click-default-group = "^1.2.2"
 pydantic = "^1.4"
 jsonschema = "^3.2.0"
 sqlparse = "^0.4.1"
+PyYAML = "^5.4.1"
 
 
 [tool.poetry.dev-dependencies]
