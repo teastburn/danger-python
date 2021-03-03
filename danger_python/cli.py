@@ -41,13 +41,16 @@ def local(arguments: List[str]) -> None:
 @danger_command(cli, "ci")
 def ci(arguments: List[str]) -> None:
     """Runs Danger on CI"""
-    _execute_danger_js("", arguments)
+    _execute_danger_js("ci", arguments)
 
 
 def _execute_danger_js(command_name: str, arguments: List[str]) -> None:
-    command = [command_name]
+    #command = [command_name]
+    command = []
     command.extend(arguments)
 
     process = invoke_danger(command)
+    if process.returncode > 0:
+        print(process.stderr.decode('utf-8'))
     click.echo(process.stdout)
     sys.exit(process.returncode)
