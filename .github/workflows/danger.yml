@@ -11,4 +11,7 @@ jobs:
     - name: Run Danger
       uses: ./
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+    - name: Set env var
+      run: |
+          echo "NEEDS_REVIEW=true" >> $GITHUB_ENV
