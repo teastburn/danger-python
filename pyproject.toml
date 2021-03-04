@@ -17,6 +17,7 @@ pydantic = "^1.4"
 jsonschema = "^3.2.0"
 sqlparse = "^0.4.1"
 PyYAML = "^5.4.1"
+PyGithub = "^1.54.1"
 
 
 [tool.poetry.dev-dependencies]

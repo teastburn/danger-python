@@ -12,6 +12,8 @@ jobs:
       uses: ./
       env:
         GITHUB_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+    - name: Set
+      run
     - name: Set env var
       run: |
           echo "NEEDS_REVIEW=true" >> $GITHUB_ENV
